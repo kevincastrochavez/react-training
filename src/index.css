@@ -98,3 +98,7 @@ canvas {
   overflow: hidden;
   cursor: crosshair;
 }
+
+.hidden {
+  display: none;
+}

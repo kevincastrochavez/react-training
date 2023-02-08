@@ -1,13 +1,14 @@
 import Name from "./Name";
 import Paint from "./Paint";
 import PlayGround from "./PlayGround";
+import WindowSize from "./WindowSize";
 
 function App() {
   return (
     <div className="App">
-      {/* <PlayGround /> */}
-      {/* <Name /> */}
       <Paint />
+
+      <WindowSize />
     </div>
   );
 }
