@@ -1,7 +1,9 @@
+import PlayGround from "./PlayGround";
+
 function App() {
   return (
     <div className="App">
-     App
+    <PlayGround />
     </div>
   );
 }
