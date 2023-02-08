@@ -13,13 +13,16 @@ export default class Canvas extends React.Component {
       width: window.innerWidth,
     };
   }
+
   componentDidMount() {
     this.ctx = this.canvasRef.current.getContext("2d");
     window.addEventListener("resize", this.handleResize);
   }
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.handleResize);
   }
+
   handleMouseMove(e) {
     // actual coordinates
     const coords = [
@@ -34,9 +37,11 @@ export default class Canvas extends React.Component {
       this.props.handleMouseMove(...coords);
     }
   }
+
   handleResize() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
+
   startDrawing(e) {
     this.ctx.lineJoin = "round";
     this.ctx.lineCap = "round";
@@ -50,10 +55,12 @@ export default class Canvas extends React.Component {
     );
     this.setState({ drawing: true });
   }
+
   stopDrawing() {
     this.ctx.closePath();
     this.setState({ drawing: false });
   }
+
   render() {
     return (
       <React.Fragment>
